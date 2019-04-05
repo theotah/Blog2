@@ -163,11 +163,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-<<<<<<< HEAD
   bootstrap-sass (~> 3.3.7)
-=======
-  bootstrap-sass (~> 3.3.5)
->>>>>>> dc837fb84f65fc7bfd2b41eab3a43b174b6bbc74
   byebug
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
