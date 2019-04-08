@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :articles
+  resources :users, except: [:new]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -8,6 +9,10 @@ Rails.application.routes.draw do
   
   get 'pages/home', to: 'pages#home'
   get 'pages/about', to: 'pages#about'
+  
+  get 'signup', to: 'users#new'
+
+resources :users, except: [:new]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
