@@ -41,6 +41,7 @@ end
 
 private
 
+
     def category_params
 
     params.require(:category).permit(:name)
