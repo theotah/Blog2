@@ -1,0 +1,25 @@
+<h1 align="center"><%= "Class: " + @classification.classification + " - " + @classification.class_description %></h1>
+
+<div align="center">
+
+<% if logged_in? and current_user.admin? %>
+
+<div class="row">
+
+<span class="badge"><%= link_to "Edit Class", edit_classification_path(@classification) %></span>
+
+</div>
+
+<% end %>
+
+<%= will_paginate @classification_articles %>
+
+</div>
+
+<%= render 'articles/article', obj: @classification_articles %>
+
+<div align="center">
+
+<%= will_paginate @classification_articles %>
+
+</div>

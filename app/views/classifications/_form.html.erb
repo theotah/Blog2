@@ -1,0 +1,54 @@
+<%= render 'shared/errors', obj: @classification %>
+
+<%= form_for(@classification, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+
+<div class="form-group">
+
+<div class="control-label col-sm-2">
+
+<%= f.label :class %>
+
+</div>
+
+<div class="col-sm-8">
+
+<%= f.text_field :classification, class: "form-control", placeholder: "NCC Building Classification", autofocus: true %>
+
+</div>
+
+</div>
+
+
+<div class="form-group">
+
+<div class="control-label col-sm-2">
+
+<%= f.label :Classification_Description %>
+
+</div>
+
+<div class="col-sm-8">
+
+<%= f.text_area :class_description, rows: 3, class: "form-control", placeholder: "NCC Building Classification", autofocus: true %>
+
+</div>
+
+</div>
+
+<div class="form-group">
+
+<div class="col-sm-offset-2 col-sm-10">
+
+<%= f.submit class: 'btn btn-primary btn-lg' %>
+
+</div>
+
+</div>
+
+<% end %>
+
+<div class="col-xs-4 col-xs-offset-4">
+
+[ <%= link_to "Cancel request and return to classifications listing", classifications_path %> ]
+
+</div>
